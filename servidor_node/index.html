@@ -4,17 +4,43 @@
 <html>
 <head>
 	<title>Node.js</title>
-	
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+
 <script src="http://192.168.1.59:3000/socket.io/socket.io.js"></script>
 <script>
   var socket = io('http://192.168.1.59:3000');
-  socket.on('news', function (data) {
-    console.log(data);
-    socket.emit('my other event', { my: 'data' });
+
+  
+
+
+
+  $(function(){
+  	
+  	$("[name='opcion']").on('change', function(){
+  		if($(this).val() == '1'){
+
+  			socket.emit('chat', { dato: 'chat'});
+  			console.log("seleccionaste chat");
+  		}
+  		else{
+  			socket.emit('aula_virtual', {dato: 'aula'});
+  			console.log("seleccionaste aula");
+  		}
+  	});
+  
+
+
   });
 </script>
 </head>
 <body>
+	<select name="opcion" id="opcion" class="combo">
+		<option value="1">chat</option>
+		<option value="2">Aula Virtual</option>
+	</select>
+
 	<h1>Node.js esta corriendo</h1>
 </body>
 </html>

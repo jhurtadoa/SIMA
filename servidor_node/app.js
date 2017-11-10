@@ -2,9 +2,18 @@ var app = require('http').createServer(handler)
 var io = require('socket.io')(app);
 var fs = require('fs');
 
-app.listen(80);
+//Carga de componentes
+var chatComponent = require('./Components/chat.js');
+var aula_virtualComponent= require('./Components/aula_virtual.js');
+
+const hostname = '192.168.1.59';
+const port = 3000;
+app.listen(port, hostname, () => {
+  console.log(`El servidor se está ejecutando en http://${hostname}:${port}/`);
+});
 
 function handler (req, res) {
+
   fs.readFile(__dirname + '/index.html',
   function (err, data) {
     if (err) {
@@ -18,8 +27,15 @@ function handler (req, res) {
 }
 
 io.on('connection', function (socket) {
-  socket.emit('news', { hello: 'world' });
-  socket.on('my other event', function (data) {
-    console.log(data);
+  console.log('ya se conectó');
+  chatComponent(socket);
+  aula_virtualComponent(socket);
+
+  socket.on('disconnect', function () {
+    console.log('Un usuario a cerrado sesion');
   });
 });
+
+
+
+
