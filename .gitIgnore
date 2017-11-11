@@ -36,6 +36,9 @@ build/Release
 servidor_node/node_modules/
 servidor_node/jspm_packages/
 
+EducacionDistanciaApp/node_modules/
+EducacionDistanciaApp/servidor_node/jspm_packages/
+
 # Typescript v1 declaration files
 typings/
 
