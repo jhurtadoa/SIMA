@@ -1,0 +1,30 @@
+.main-color{
+	background-color: #004a75;
+	color: #fff;
+}
+
+body, html{
+	margin: 0px !important;
+	padding: 0px;
+}
+
+header nav {
+	height: 3em;
+}
+
+header nav a {
+	border: 1px solid #7bb0d0;
+	border-radius: 5px;
+	color: #fff;
+	display: inline-block;
+	height: 1.6em;
+	background-color: #7bb0d0;
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+footer{
+	position: absolute;
+	bottom:0;
+	width:100%;
+}
