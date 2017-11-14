@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+.main-color{
+	background-color: #004a75 !important;
+	color: #fff !important;
+}
+
+.main-color a{
+	color: #fff !important;
+}
+
+body, html{
+	margin: 0px !important;
+	padding: 0px;
+}
+/*
+header nav {
+	height: 3em;
+}
+
+header nav a {
+	border: 1px solid #7bb0d0;
+	border-radius: 5px;
+	color: #fff;
+	display: inline-block;
+	height: 1.6em;
+	background-color: #7bb0d0;
+	text-decoration: none;
+	vertical-align: middle;
+}
+*/
+footer{
+	position: absolute;
+	bottom:0;
+	width:100%;
+}
+ 

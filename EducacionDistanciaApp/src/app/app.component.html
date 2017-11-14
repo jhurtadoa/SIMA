@@ -1,29 +1,37 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>{{ title }}</title>
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
-	<script type="text/javascript" src="assets/js/bootstrap.js"></script>
-
-</head>
-<body>
-	<header class="main-color">
-		<section>
-			<h1>{{ title }}</h1>
-		</section>
-		<nav>
-			<a routerLink="/chat">Ir a Chat</a>
-<a routerLink="/aula-virtual">Ir a Aula virtual</a>
-		</nav>
-	</header>
-	<section id="main">
-		<router-outlet></router-outlet>
+<header class="main-color">
+	<!--<section>
+		<h1></h1>
 	</section>
-	<footer class="main-color">Copyright ® 2017</footer>
-</body>
-</html>
+	<nav>
+		<a routerLink="/chat">Ir a Chat</a>
+		<a routerLink="/aula-virtual">Ir a Aula virtual</a>
+	</nav>-->
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light main-color">
+	  	<a class="navbar-brand" routerLink="/">{{ title }}</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	    	<span class="navbar-toggler-icon"></span>
+	  	</button>
+	  	<div class="collapse navbar-collapse" id="navbarNav">
+		    <ul class="navbar-nav">
+		      	<li class="nav-item active">
+		        	<a class="nav-link" routerLink="/chat">Chat</a>
+		      	</li>
+		      	<li class="nav-item">
+		        	<a class="nav-link" routerLink="/aula-virtual">Aula virtual</a>
+		      	</li>
+		    </ul>
+	  	</div>
+	</nav>
 
 
+
+
+</header>
+	<section id="main">
+  		<router-outlet></router-outlet>
+	</section>
+<footer class="main-color">Copyright ® 2017</footer>
 
 
 

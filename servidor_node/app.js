@@ -12,9 +12,10 @@ app.listen(port, hostname, () => {
   console.log(`El servidor se está ejecutando en http://${hostname}:${port}/`);
 });
 
+
 function handler (req, res) {
 
-  fs.readFile(__dirname + '/index.html',
+  fs.readFile(__dirname + "/index.html",
   function (err, data) {
     if (err) {
       res.writeHead(500);
@@ -25,6 +26,7 @@ function handler (req, res) {
     res.end(data);
   });
 }
+
 
 
 

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import * as io from 'socket.io-client';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Educación a Distancia';
+	public socket;
+  	public title:string; 
+
+  	constructor(){
+  		this.title = 'Educación a Distancia';
+  		this.socket = io('http://192.168.1.59:3000');
+	}
 }

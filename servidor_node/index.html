@@ -11,22 +11,26 @@
 <script src="http://192.168.1.59:3000/socket.io/socket.io.js"></script>
 <script>
   var socket = io('http://192.168.1.59:3000');
-
+  
+  
   
 
 
 
   $(function(){
-  	
+  	debugger;
+    console.log("el usuario " + socket.id +" ingresó a la aplicacion");
+
   	$("[name='opcion']").on('change', function(){
   		if($(this).val() == '1'){
 
   			socket.emit('chat', { dato: 'chat'});
-  			console.log("seleccionaste chat");
+
+  			console.log("el usuario " + socket.id +" ingresó a chat");
   		}
   		else{
   			socket.emit('aula_virtual', {dato: 'aula'});
-  			console.log("seleccionaste aula");
+  			console.log("el usuario " + socket.id +" ingresó a aula");
   		}
   	});
   
