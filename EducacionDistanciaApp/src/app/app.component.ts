@@ -7,6 +7,8 @@ import * as io from 'socket.io-client';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
+
 export class AppComponent {
 	public socket;
   	public title:string; 

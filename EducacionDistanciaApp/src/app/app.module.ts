@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChatComponent } from './chat/chat.component';
 import { AulaVirtualComponent } from './aula-virtual/aula-virtual.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChatComponent,
-    AulaVirtualComponent
+    AulaVirtualComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

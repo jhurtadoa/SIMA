@@ -36,6 +36,7 @@ io.on('connection', function (socket) {
   console.log('ya se conectó');
   chatComponent(socket);
   aula_virtualComponent(socket);
+  
 
   socket.on('disconnect', function () {
     console.log('Un usuario a cerrado sesion');

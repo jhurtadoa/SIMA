@@ -11,3 +11,7 @@ width: 100% !important;
 	display: block;
 }
 
+canvas{
+    border:1px solid black;
+}
+
