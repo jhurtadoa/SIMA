@@ -6,7 +6,7 @@ var fs = require('fs');
 var chatComponent = require('./Components/chat.js');
 var aula_virtualComponent= require('./Components/aula_virtual.js');
 
-const hostname = '192.168.1.59';
+const hostname = 'localhost';
 const port = 3000;
 app.listen(port, hostname, () => {
   console.log(`El servidor se está ejecutando en http://${hostname}:${port}/`);
@@ -30,11 +30,18 @@ function handler (req, res) {
 
 
 
-
-
 io.on('connection', function (socket) {
+
+
+
+  var usuario = new Object();
+  usuario.Id = 1;
+  usuario.nombre = "Berna";
+  debugger;
+
   console.log('ya se conectó');
-  chatComponent(socket);
+  chatComponent(io, socket);
+  
   aula_virtualComponent(socket);
 
   socket.on('disconnect', function () {
