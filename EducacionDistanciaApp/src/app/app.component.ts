@@ -15,6 +15,6 @@ export class AppComponent {
 
   	constructor(){
   		this.title = 'Educación a Distancia';
-  		this.socket = io('http://192.168.1.59:3000');
+  		this.socket = io('http://localhost:3000');
 	}
 }
