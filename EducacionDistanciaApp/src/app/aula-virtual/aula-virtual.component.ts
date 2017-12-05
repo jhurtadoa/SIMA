@@ -18,7 +18,7 @@ private metodonuevo(data){
     public socket: any;
 	constructor() { 
 		alert("constructor");
-        this.socket = io('http://192.168.1.59:3000');
+        this.socket = io('http://localhost:3000');
         this.socket.on("borrar", function(data){
             
             this.metodonuevo(data);
