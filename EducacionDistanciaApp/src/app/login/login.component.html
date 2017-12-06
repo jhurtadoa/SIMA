@@ -1,4 +1,4 @@
-<form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+<!-- <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
     <div>
         <label for="txUsuario">Usuario</label>
         <input type="text" name="txUser" id="txUser" placeholder="Ingrese su usuario" ngModel>
@@ -10,4 +10,25 @@
     <div>
         <input type="submit" value="Ingresar">
     </div> 
-</form>
+</form> -->
+ 
+
+    <div class="row">
+        <div class="col-md-offset-5 col-md-3">
+            <div class="">
+                <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+                    <h4>Plataforma de educación virtual y a distancia</h4>
+                    <input type="text" id="txUser" name="txUser" class="form-control input-sm chat-input" placeholder="Ingrese su usuario" style="margin-bottom: 10px" ngModel/>
+                    
+                    <input type="password" id="txPassword" name="txPassword" class="form-control input-sm chat-input" placeholder="password" style="margin-bottom: 10px" ngModel />
+                 
+                    <div class="wrapper">
+                    <span class="group-btn">     
+                        <input type="submit" class="btn btn-primary btn-md" value="Ingresar">
+                    </span>
+                    </div>
+                </form>
+            </div>
+        
+        </div>
+    </div> 

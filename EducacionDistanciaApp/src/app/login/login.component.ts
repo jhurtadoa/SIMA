@@ -16,13 +16,15 @@ export class LoginComponent implements OnInit {
   }
 
   public login(form: NgForm){
+      debugger;
     console.log(form.value);
-    if(form.value.txUser == users_list[0].nombre && 
-       form.value.txPassword == users_list[0].password)
+    //if(form.value.txUser == users_list[0].nombre && 
+    //   form.value.txPassword == users_list[0].password)
+    if(form.value.txUser != "" && form.value.txPassword != "")
     {
         localStorage.setItem('userlogin', form.value.txUser);
-        alert("Usuario logueado correctamente");
-        this.router.navigate(['/']);
+        alert("Bienvenido "+ form.value.txUser);
+        this.router.navigate(['/dashboard']);
     }else{
         localStorage.setItem('userlogin', null);
         alert("Usuario o contraseña incorrecta");

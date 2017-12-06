@@ -4,10 +4,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { ChatComponent }      from './chat/chat.component';
 import { AulaVirtualComponent } from './aula-virtual/aula-virtual.component';
 import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
-  { path: '', children: []},
+  { path: '', component: LoginComponent},
   { path: 'login', component: LoginComponent },
+  { path: 'dashboard', component: DashboardComponent },
   { path: 'chat', component: ChatComponent },
   { path: 'aula-virtual', component: AulaVirtualComponent }
 ];

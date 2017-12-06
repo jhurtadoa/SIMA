@@ -12,7 +12,7 @@ declare var fabric:any;
 export class ChatComponent implements OnInit {
 	public socket = io('http://localhost:3000');
 	public mensaje:String;
-
+    public usuarioLogin:string;
 
  	constructor() {
  		this.mensaje = '' 		
@@ -25,12 +25,12 @@ export class ChatComponent implements OnInit {
  	}
 
   	ngOnInit() {
-
+        this.usuarioLogin= localStorage.getItem("userlogin");
   	}
 
   	EnvioMensaje(Usuario){		
 
-		this.socket.emit('chat', Usuario + ": " + $("#mensaje").val());
+		this.socket.emit('chat', this.usuarioLogin + ": " + $("#mensaje").val());
 		$("#mensaje").val("");		
 		
   	}

@@ -42,7 +42,7 @@ io.on('connection', function (socket) {
   console.log('ya se conectó');
   chatComponent(io, socket);
   
-  aula_virtualComponent(socket);
+  aula_virtualComponent(io, socket);
   
 
   socket.on('disconnect', function () {
